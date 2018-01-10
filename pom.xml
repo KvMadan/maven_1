@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.amdocs.perf</groupId>
+  <artifactId>jmeter-poc-project</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>jmeter-poc-project</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <build>
+	<plugins>
+		<plugin>
+			<groupId>com.lazerycode.jmeter</groupId>
+			<artifactId>jmeter-maven-plugin</artifactId>
+			<version>2.6.0</version>
+			<executions>
+				<execution>
+					<id>jmeter-tests</id>
+					<goals>
+						<goal>jmeter</goal>
+					</goals>
+				</execution>
+			</executions>
+			<configuration>
+				<proxyConfig>
+					<host>genproxy.amdocs.com</host>
+					<port>8080</port>
+					<username></username>
+					<password></password>
+					<hostExclusions>localhost|*.lazerycode.com</hostExclusions>
+				</proxyConfig>
+				<ignoreResultFailures>true</ignoreResultFailures>
+				<!--<remoteConfig>
+					<startServersBeforeTests>true</startServersBeforeTests>
+				</remoteConfig>-->
+				<suppressJMeterOutput>false</suppressJMeterOutput>
+				<!--<propertiesSystem>
+					<java.rmi.server.hostname>jenkins.nerdability.com</java.rmi.server.hostname>
+				</propertiesSystem>
+				-->
+				<!-- supplied by jenkins / sys props ${env.users}${env.iterations}-->
+				<!--<propertiesGlobal>
+					
+					<users>25</users>
+					<iterations>2</iterations>
+				</propertiesGlobal>	
+				-->
+				<propertiesUser>
+					<P_Threads>${P_Thread_Count}</P_Threads>
+				</propertiesUser>
+			</configuration>			
+		</plugin>
+	</plugins>
+  </build>
+</project>
