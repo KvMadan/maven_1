@@ -66,7 +66,7 @@
 				-->
 				<propertiesUser>
 					<P_Threads>${P_Thread_Count}</P_Threads>
-					<P_Threads>${P_Run_Duration}</P_Threads>
+					<P_Duration>${P_Run_Duration}</P_Duration>
 				</propertiesUser>
 			</configuration>			
 		</plugin>
