@@ -24,7 +24,13 @@
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-java</artifactId>
         <version>3.7.1</version>
-    </dependency> 	
+    </dependency> 
+	<dependency>
+		<groupId>org.testng</groupId>
+		<artifactId>testng</artifactId>
+		<version>6.8</version>
+		<scope>test</scope>
+	</dependency>	
   </dependencies>
   <build>
 	<plugins>
