@@ -47,6 +47,7 @@
 				</execution>
 			</executions>
 			<configuration>
+				<resultsFileFormat>jtl</resultsFileFormat>
 				<proxyConfig>
 					<host>genproxy.amdocs.com</host>
 					<port>8080</port>
