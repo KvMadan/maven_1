@@ -16,36 +16,13 @@
    limitations under the License.
 -->
 <project name="ant-jmeter" default="all">
-    <description>
 
-        Sample build file for use with ant-jmeter.jar
-        See http://www.programmerplanet.org/pages/projects/jmeter-ant-task.php
-
-    To run a test and create the output report:
-        ant -Dtest=script
-
-    To run a test only:
-        ant -Dtest=script run
-
-    To run report on existing test output
-        ant -Dtest=script report
-
-    The "script" parameter is the name of the script without the .jmx suffix.
-
-    Additional options:
-        -Dshow-data=y - include response data in Failure Details
-        -Dtestpath=xyz - path to test file(s) (default user.dir).
-                         N.B. Ant interprets relative paths against the build file
-        -Djmeter.home=.. - path to JMeter home directory (defaults to parent of this build file)
-        -Dreport.title="My Report" - title for html report (default is 'Load Test Results')
-    </description>
-    
     <property name="testpath" value="${user.dir}"/>
     <property name="jmeter.home" value="${basedir}/target/jmeter"/>
-    <property name="report.title" value="Load Test Results"/>
+    <property name="report.title" value="Comcast Modesto Load Test Results"/>
     
     <!-- Name of test (without .jmx) -->
-    <property name="test" value="Test"/>
+    <property name="test" value="JmeterPocTestPlan"/>
     
     <!-- Should report include response data for failures? -->
     <property name="show-data" value="n"/>
@@ -93,20 +70,21 @@
     </path>
 
     <target name="report" depends="xslt-report,copy-images">
-        <echo>Report generated at ${report.datestamp}</echo>
+        <echo>Report generated at ${report.timestamp}</echo>
     </target>
 
     <target name="xslt-report" depends="_message_xalan">
-        <tstamp><format property="report.datestamp" pattern="yyyy/MM/dd HH:mm"/></tstamp>
+        <tstamp><format property="report.datestamp" pattern="yyyyMMdd"/></tstamp>
+		<tstamp><format property="report.timestamp" pattern="dd MMM yyyy HH:mm"/></tstamp>
         <xslt
             classpathref="xslt.classpath"
             force="true"
-            in="${testpath}/target/jmeter/results/${test}.jtl"
+            in="${testpath}/target/jmeter/results/${report.datestamp}-${test}.jtl"
             out="${testpath}/target/jmeter/results/${test}.html"
             style="${basedir}/src/test/resources/jmeter-results-detail-report${style_version}.xsl">
             <param name="showData" expression="${show-data}"/>
             <param name="titleReport" expression="${report.title}"/>
-            <param name="dateReport" expression="${report.datestamp}"/>
+            <param name="dateReport" expression="${report.timestamp}"/>
         </xslt>
     </target>
 
