@@ -81,7 +81,7 @@
             force="true"
             in="${testpath}/../results/${report.datestamp}-${test}.jtl"
             out="${testpath}/../report/${test}.html"
-            style="${basedir}/src/test/resources/jmeter-results-detail-report${style_version}.xsl">
+            style="${basedir}/src/test/resources/jmeter-results-report${style_version}.xsl">
             <param name="showData" expression="${show-data}"/>
             <param name="titleReport" expression="${report.title}"/>
             <param name="dateReport" expression="${report.timestamp}"/>
