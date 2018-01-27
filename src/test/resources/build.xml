@@ -90,8 +90,8 @@
 
     <!-- Copy report images if needed -->
     <target name="copy-images">
-        <copy file="${basedir}/src/test/resources/expand.png" tofile="${testpath}/target/jmeter/report/expand.png"/>
-        <copy file="${basedir}/src/test/resources/collapse.png" tofile="${testpath}/target/jmeter/report/collapse.png"/>
+        <copy file="${basedir}/src/test/resources/expand.png" tofile="${testpath}/../report/expand.png"/>
+        <copy file="${basedir}/src/test/resources/collapse.png" tofile="${testpath}/../report/collapse.png"/>
     </target>
 
     <!-- Check that the xalan libraries are present -->
