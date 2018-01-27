@@ -88,7 +88,7 @@
 	<table width="100%">
 		<tr>
 			<td align="left">Date report: <xsl:value-of select="$dateReport" /></td>
-			<td align="right">Designed for use with <a href="http://jmeter.apache.org/">JMeter</a> and <a href="http://ant.apache.org">Ant</a>.</td>
+			<td align="right">Designed for use with <a href="http://www.amdocs.com/">Amdocs Performance Oneview(R)</a> Contact <a href="mailto:madan.kavarthapu@amdocs.com">OneView PT Team</a> for details.</td>
 		</tr>
 	</table>
 	<hr size="1" />
@@ -157,10 +157,10 @@
 	</table>
 </xsl:template>
 <xsl:template name="pagelist">
-	<h2>Pages</h2>
+	<h2>Transactions Summary</h2>
 	<table align="center" class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
 		<tr valign="top">
-			<th>URL</th>
+			<th>Transaction Name</th>
 			<th># Samples</th>
 			<th>Failures</th>
 			<th>Success Rate</th>
