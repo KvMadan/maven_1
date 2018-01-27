@@ -88,7 +88,7 @@
 	<table width="100%">
 		<tr>
 			<td align="left">Date report: <xsl:value-of select="$dateReport" /></td>
-			<td align="right">Designed for use with <a href="http://www.amdocs.com/">Amdocs Performance Oneview(R)</a> Contact <a href="mailto:madan.kavarthapu@amdocs.com">OneView PT Team</a> for details.</td>
+			<td align="right">Designed for use with <a href="http://www.amdocs.com/">Amdocs Performance OneView <sup>&#174;</sup> </a> Contact <a href="mailto:madan.kavarthapu@amdocs.com">OneView PT Team</a> for details.</td>
 		</tr>
 	</table>
 	<hr size="1" />
