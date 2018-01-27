@@ -111,7 +111,7 @@
 			<version>1.7</version>
 			<executions>
 			  <execution>
-				<phase>process-test-resources</phase>
+				<phase>deploy</phase>
 				<configuration>
 					<target>
 						<ant antfile="./src/test/resources/build.xml" />
