@@ -79,7 +79,7 @@
         <xslt
             classpathref="xslt.classpath"
             force="true"
-            in="${testpath}/target/jmeter/results/${report.datestamp}-${test}.jtl"
+            in="${testpath}/../results/${report.datestamp}-${test}.jtl"
             out="${testpath}/target/jmeter/results/${test}.html"
             style="${basedir}/src/test/resources/jmeter-results-detail-report${style_version}.xsl">
             <param name="showData" expression="${show-data}"/>
