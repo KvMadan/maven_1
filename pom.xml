@@ -105,7 +105,25 @@
               </configuration>
             </execution>
           </executions>
-        </plugin>	
+        </plugin>
+		<plugin>
+			<artifactId>maven-antrun-plugin</artifactId>
+			<version>1.7</version>
+			<executions>
+			  <execution>
+				<phase>process-test-resources</phase>
+				<configuration>
+					<target>
+						<ant antfile="./src/test/resources/build.xml" />
+						<echo message="This is ant called from maven" />
+					</target>
+				</configuration>
+				<goals>
+				  <goal>run</goal>
+				</goals>
+			  </execution>
+			</executions>
+		</plugin>		
 	</plugins>
   </build>
 </project>
