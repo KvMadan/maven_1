@@ -80,7 +80,7 @@
             classpathref="xslt.classpath"
             force="true"
             in="${testpath}/../results/${report.datestamp}-${test}.jtl"
-            out="${testpath}/target/jmeter/results/${test}.html"
+            out="${testpath}/../report/${test}.html"
             style="${basedir}/src/test/resources/jmeter-results-detail-report${style_version}.xsl">
             <param name="showData" expression="${show-data}"/>
             <param name="titleReport" expression="${report.title}"/>
@@ -90,8 +90,8 @@
 
     <!-- Copy report images if needed -->
     <target name="copy-images">
-        <copy file="${basedir}/src/test/resources/expand.png" tofile="${testpath}/target/jmeter/results/expand.png"/>
-        <copy file="${basedir}/src/test/resources/collapse.png" tofile="${testpath}/target/jmeter/results/collapse.png"/>
+        <copy file="${basedir}/src/test/resources/expand.png" tofile="${testpath}/target/jmeter/report/expand.png"/>
+        <copy file="${basedir}/src/test/resources/collapse.png" tofile="${testpath}/target/jmeter/report/collapse.png"/>
     </target>
 
     <!-- Check that the xalan libraries are present -->
