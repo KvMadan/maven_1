@@ -30,26 +30,15 @@
 		<artifactId>testng</artifactId>
 		<version>6.8</version>
 		<scope>test</scope>
-	</dependency>	
+	</dependency>
+<!-- https://mvnrepository.com/artifact/com.github.klieber/phantomjs -->
+	<dependency>
+		<groupId>com.github.klieber</groupId>
+		<artifactId>phantomjs</artifactId>
+		<version>2.1.1</version>
+	</dependency>
   </dependencies>
   <build>
-	<plugins>
-		<!-- Installs PhantomJS so it doesn't have to be pre-installed -->
-		<plugin>
-			<groupId>com.github.klieber</groupId>
-			<artifactId>phantomjs</artifactId>
-			<version>2.1.1</version>
-			<executions>
-				<execution>
-					<goals>
-						<goal>install</goal>
-					</goals>
-				</execution>
-			</executions>
-			<configuration>
-				<version>2.1.1</version>
-			</configuration>
-		</plugin>
 		<plugin>
 			<groupId>com.lazerycode.jmeter</groupId>
 			<artifactId>jmeter-maven-plugin</artifactId>
