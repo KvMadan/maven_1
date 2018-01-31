@@ -37,7 +37,7 @@
 		<!-- Installs PhantomJS so it doesn't have to be pre-installed -->
 		<plugin>
 			<groupId>com.github.klieber</groupId>
-			<artifactId>phantomjs-maven-plugin</artifactId>
+			<artifactId>phantomjs</artifactId>
 			<version>2.1.1</version>
 			<executions>
 				<execution>
