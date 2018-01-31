@@ -34,24 +34,22 @@
   </dependencies>
   <build>
 	<plugins>
-		<plugins>
-			<!-- Installs PhantomJS so it doesn't have to be pre-installed -->
-			<plugin>
-				<groupId>com.github.klieber</groupId>
-				<artifactId>phantomjs-maven-plugin</artifactId>
+		<!-- Installs PhantomJS so it doesn't have to be pre-installed -->
+		<plugin>
+			<groupId>com.github.klieber</groupId>
+			<artifactId>phantomjs-maven-plugin</artifactId>
+			<version>2.1.1</version>
+			<executions>
+				<execution>
+					<goals>
+						<goal>install</goal>
+					</goals>
+				</execution>
+			</executions>
+			<configuration>
 				<version>2.1.1</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>install</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<version>2.1.1</version>
-				</configuration>
-			</plugin>
-		</plugins>
+			</configuration>
+		</plugin>
 		<plugin>
 			<groupId>com.lazerycode.jmeter</groupId>
 			<artifactId>jmeter-maven-plugin</artifactId>
