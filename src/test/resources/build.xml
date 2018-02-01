@@ -92,8 +92,8 @@
     <target name="copy-images">
 		<!--Uncomment below two lines if you are using Detailed report --> 
         <!--<copy file="${basedir}/src/test/resources/expand.png" tofile="${testpath}/../report/expand.png"/>
-        <copy file="${basedir}/src/test/resources/collapse.png" tofile="${testpath}/../report/collapse.png"/>-->
-		<copy file="${basedir}/src/test/resources/graph.png" tofile="${testpath}/../report/graph.png"/>
+        <copy file="${basedir}/src/test/resources/collapse.png" tofile="${testpath}/../report/collapse.png"/>
+		<copy file="${basedir}/src/test/resources/graph.png" tofile="${testpath}/../report/graph.png"/>-->
 		<copy file="${basedir}/src/test/resources/lazySnapshot.js" tofile="${testpath}/../../phantomjs-maven-plugin/phantomjs-2.1.1-windows/bin/lazySnapshot.js"/>
     </target>
 
