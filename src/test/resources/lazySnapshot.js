@@ -18,6 +18,8 @@ var page          = require('webpage').create(), system = require('system'),
     count         = 0,
     forcedRenderTimeout,
     renderTimeout;
+	
+var snapName = "snap.png";		
 
 page.viewportSize = { width: 1280, height : 1024 };
 
@@ -27,10 +29,12 @@ if (system.args.length === 1) {
 }
 else {
 	url = system.args[1];
+	snapName = system.args[2];
 }
 
 function doRender() {
-    page.render('.\\target\\jmeter\\report\\snap.png');
+    //page.render('.\\target\\jmeter\\report\\snap.png');
+	page.render(snapName);
     phantom.exit();
 }
 

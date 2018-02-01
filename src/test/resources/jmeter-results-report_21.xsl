@@ -306,7 +306,8 @@
 	<table width="100%">
 		<tr>
 			<td align="left">Date report: <xsl:value-of select="$dateReport" /></td>
-			<p style="text-align:center;"><img src="snap.png" tooltip="Resource Utilization" height="1800" width="1442"/></p>
+			<p style="text-align:center;"><img src="transactions.png" tooltip="Transaction Details" height="800" width="1442"/></p>
+			<p style="text-align:center;"><img src="resources.png" tooltip="Resource Utilization" height="1800" width="1442"/></p>
 		</tr>
 	</table>
 	<hr size="1" />
