@@ -114,8 +114,9 @@
 
 	<target name="snapshot">
 	   <exec executable="${testpath}/target/phantomjs-maven-plugin/phantomjs-2.1.1-windows/bin/phantomjs.exe">
+		  <arg value="--ignore-ssl-errors=true" />
 		  <arg value="${testpath}/target/phantomjs-maven-plugin/phantomjs-2.1.1-windows/bin/lazySnapshot.js"/>
-		  <arg value="https://illin3922/dashboard/db/ci-jmeter-madan?refresh=5s%26orgId=1"/>
+		  <arg value="https://illin3922/dashboard/db/ci-load-test-monitoring?refresh=5s%26orgId=1"/>
 	   </exec>
 	</target>
 </project>
