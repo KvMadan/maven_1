@@ -55,7 +55,7 @@
         classpathref="jmeter.classpath"
         classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask"/>
     
-    <target name="all" depends="run,report"/>
+    <target name="all" depends="run,report,snapshot"/>
 
     <target name="run">
         <delete file="${testpath}/target/jmeter/results/${test}.html"/>
