@@ -29,6 +29,7 @@
 
 <xsl:param name="titleReport" select="'Load Test Results'"/>
 <xsl:param name="dateReport" select="'date not defined'"/>
+<xsl:param name="graphReport" select="'Graphs'"/>
 
 <xsl:template match="testResults">
 	<html>
@@ -79,6 +80,7 @@
 			
 			<xsl:call-template name="detail" />
 
+			<xsl:call-template name="pagefooter" />
 		</body>
 	</html>
 </xsl:template>
@@ -299,4 +301,14 @@
 	<xsl:value-of select="format-number($value,'0 ms')" />
 </xsl:template>
 	
+<xsl:template name="pagefooter">
+	<h2><xsl:value-of select="$graphReport" /></h2>
+	<table width="100%">
+		<tr>
+			<td align="left">Date report: <xsl:value-of select="$dateReport" /></td>
+			<p style="text-align:center;"><img src="snap.png" tooltip="Resource Utilization" height="800" width="1442"/></p>
+		</tr>
+	</table>
+	<hr size="1" />
+</xsl:template>	
 </xsl:stylesheet>
