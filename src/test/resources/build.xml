@@ -112,7 +112,7 @@
         <echo>Check you have xalan and serializer jars in ${lib.dir}</echo>
     </target>
 
-	<target name="snapshot">
+	<target name="snapshot" depends="report">
 	   <exec executable="${testpath}/target/phantomjs-maven-plugin/phantomjs-2.1.1-windows/bin/phantomjs.exe">
 		  <arg value="--ignore-ssl-errors=true" />
 		  <arg value="${testpath}/target/phantomjs-maven-plugin/phantomjs-2.1.1-windows/bin/lazySnapshot.js"/>
