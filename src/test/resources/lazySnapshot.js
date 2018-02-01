@@ -36,7 +36,8 @@ function doRender() {
 
 page.onResourceRequested = function (req) {
     count += 1;
-    console.log('> ' + req.id + ' - ' + req.url);
+    //console.log('> ' + req.id + ' - ' + req.url);
+	console.log('...');
     clearTimeout(renderTimeout);
 };
 
