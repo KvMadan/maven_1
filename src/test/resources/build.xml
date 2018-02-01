@@ -94,7 +94,7 @@
         <!--<copy file="${basedir}/src/test/resources/expand.png" tofile="${testpath}/../report/expand.png"/>
         <copy file="${basedir}/src/test/resources/collapse.png" tofile="${testpath}/../report/collapse.png"/>-->
 		<copy file="${basedir}/src/test/resources/graph.png" tofile="${testpath}/../report/graph.png"/>
-		<copy file="${basedir}/src/test/resources/lazySnapshot.js" tofile="${testpath}/target/phantomjs-maven-plugin/phantomjs-2.1.1-windows/bin/lazySnapshot.js"/>
+		<copy file="${basedir}/src/test/resources/lazySnapshot.js" tofile="${testpath}/../../phantomjs-maven-plugin/phantomjs-2.1.1-windows/bin/lazySnapshot.js"/>
     </target>
 
     <!-- Check that the xalan libraries are present -->
