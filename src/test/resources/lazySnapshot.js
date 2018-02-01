@@ -30,7 +30,7 @@ else {
 }
 
 function doRender() {
-    page.render('snap.png');
+    page.render('.\\target\\jmeter\\report\\snap.png');
     phantom.exit();
 }
 
