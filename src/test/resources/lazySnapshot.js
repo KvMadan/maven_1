@@ -43,7 +43,8 @@ page.onResourceRequested = function (req) {
 page.onResourceReceived = function (res) {
     if (!res.stage || res.stage === 'end') {
         count -= 1;
-        console.log(res.id + ' ' + res.status + ' - ' + res.url);
+        //console.log(res.id + ' ' + res.status + ' - ' + res.url);
+		console.log('...');
         if (count === 0) {
             renderTimeout = setTimeout(doRender, resourceWait);
         }
