@@ -107,16 +107,18 @@
     </condition>
 
     <target name="_message_xalan" unless="xalan.present">
-          <echo>Cannot find all xalan and/or serialiser jars</echo>
+        <echo>Cannot find all xalan and/or serialiser jars</echo>
         <echo>The XSLT formatting may not work correctly.</echo>
         <echo>Check you have xalan and serializer jars in ${lib.dir}</echo>
     </target>
 
 	<target name="snapshot" depends="report">
+	   <echo>Generating Grafana Snapshots</echo>
 	   <exec executable="${testpath}/../../phantomjs-maven-plugin/phantomjs-2.1.1-windows/bin/phantomjs.exe">
 		  <arg value="--ignore-ssl-errors=true" />
 		  <arg value="${testpath}/../../phantomjs-maven-plugin/phantomjs-2.1.1-windows/bin/lazySnapshot.js"/>
 		  <arg value="https://illin3922/dashboard/db/ci-load-test-monitoring?refresh=5s%26orgId=1"/>
 	   </exec>
+	   <copy file="${basedir}/../../../graph.png" tofile="${testpath}/../../../graph.png"/>
 	</target>
 </project>
