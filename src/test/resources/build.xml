@@ -93,6 +93,7 @@
 		<!--Uncomment below two lines if you are using Detailed report --> 
         <!--<copy file="${basedir}/src/test/resources/expand.png" tofile="${testpath}/../report/expand.png"/>
         <copy file="${basedir}/src/test/resources/collapse.png" tofile="${testpath}/../report/collapse.png"/>-->
+		<copy file="${basedir}/src/test/resources/graph.png" tofile="${testpath}/../report/graph.png"/>
     </target>
 
     <!-- Check that the xalan libraries are present -->
