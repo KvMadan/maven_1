@@ -41,7 +41,7 @@ function doRender() {
 page.onResourceRequested = function (req) {
     count += 1;
     //console.log('> ' + req.id + ' - ' + req.url);
-	console.log('...');
+	//console.log('...');
     clearTimeout(renderTimeout);
 };
 
@@ -58,7 +58,7 @@ page.onResourceReceived = function (res) {
 
 page.open(url, function (status) {
     if (status !== "success") {
-        console.log('Unable to load url');
+        console.log('Unable to load url go generate OneView graphs');
         phantom.exit();
     } else {
         forcedRenderTimeout = setTimeout(function () {
