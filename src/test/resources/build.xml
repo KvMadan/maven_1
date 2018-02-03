@@ -120,12 +120,14 @@
 		  <arg value="https://illin3922/dashboard/db/ci-load-test-monitoring?orgId=1"/>
 		  <arg value=".\\target\\jmeter\\report\\transactions.png"/>
 	   </exec>
+	   <echo> ... </echo>
 	   <exec executable="${testpath}/../../phantomjs-maven-plugin/phantomjs-2.1.1-windows/bin/phantomjs.exe">
 		  <arg value="--ignore-ssl-errors=true" />
 		  <arg value="${testpath}/../../phantomjs-maven-plugin/phantomjs-2.1.1-windows/bin/lazySnapshot.js"/>
 		  <arg value="https://illin3922/dashboard/db/ci-server-monitoring-dashboard?orgId=1"/>
 		  <arg value=".\\target\\jmeter\\report\\resources.png"/>
 	   </exec>
+	   <echo> ... </echo>
 	   <!--
 	   
 	   <copy file="${basedir}/snap.png" tofile="${testpath}/../../jmeter/report/snap.png"/> -->
