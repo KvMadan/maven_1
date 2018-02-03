@@ -131,7 +131,7 @@
 				<configuration>
 					<target>
 						<ant antfile="./src/test/resources/build.xml" />
-						<echo message="This is ant called from maven" />
+						<!--<echo message="Generating OneView Graphs" />-->
 					</target>
 				</configuration>
 				<goals>
