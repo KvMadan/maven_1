@@ -1132,7 +1132,7 @@
             <stringProp name="HTTPSampler.port">8080</stringProp>
             <stringProp name="HTTPSampler.protocol">http</stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">/examples/jsp/jsp2/el/implicit-objects.jsp</stringProp>
+            <stringProp name="HTTPSampler.path">/examples/jsp/jsp2/el/implicit-objects1.jsp</stringProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
