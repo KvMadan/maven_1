@@ -1,1 +1,1 @@
-## Demo Maven project demonstrating JMeter Performance Tests
+## Demo Maven project demonstrating JMeter Performance Tests with Grafana Monitoring
